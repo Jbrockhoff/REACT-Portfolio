@@ -5,11 +5,12 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function Contact() {
   return (
     <div>
-         <h3>
+         <h4>
         I would love to hear from you! Please take a moment to fill out
         the following form so that I am able to contact you regarding any questions
         you may have.
-      </h3>
+      </h4>
+      <br></br>
      
      <Form.Group className="mb-3">
       <Form.Label htmlFor="basic-url">Your Information</Form.Label>
@@ -29,6 +30,7 @@ function Contact() {
           aria-describedby="basic-addon1"
         />
       </InputGroup>
+      <br></br>
 
       <Form.Group className="mb-3">
         <Form.Label htmlFor="basic-url">Email</Form.Label>
@@ -40,10 +42,13 @@ function Contact() {
         </InputGroup>
       </Form.Group>
 
-      <InputGroup>
-        <InputGroup.Text>Message</InputGroup.Text>
-        <Form.Control as="textarea" aria-label="With textarea" />
-      </InputGroup>
+      <Form.Group className="mb-3">
+        <Form.Label placeholder="Message">Message</Form.Label>
+        <Form.Control as="textarea"
+          placeholder="Message"
+          aria-label="With textarea"
+        />
+      </Form.Group>
     </div>
   );
 }
