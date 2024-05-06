@@ -5,58 +5,45 @@ import InputGroup from 'react-bootstrap/InputGroup';
 function Contact() {
   return (
     <div>
+         <h3>
+        I would love to hear from you! Please take a moment to fill out
+        the following form so that I am able to contact you regarding any questions
+        you may have.
+      </h3>
+     
+     <Form.Group className="mb-3">
+      <Form.Label htmlFor="basic-url">Your Information</Form.Label>
+      </Form.Group>
       <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
         <Form.Control
-          placeholder="Username"
-          aria-label="Username"
+          placeholder="First Name"
+          aria-label="firstname"
           aria-describedby="basic-addon1"
         />
       </InputGroup>
 
-      <InputGroup className="mb-3">
+      <InputGroup className="mb-3">   
         <Form.Control
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
+          placeholder="Last Name"
+          aria-label="lastname"
+          aria-describedby="basic-addon1"
         />
-        <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>
       </InputGroup>
 
       <Form.Group className="mb-3">
-        <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label>
+        <Form.Label htmlFor="basic-url">Email</Form.Label>
         <InputGroup>
-          <InputGroup.Text id="basic-addon3">
-            https://example.com/users/
-          </InputGroup.Text>
-          <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+          <Form.Control id="basic-url" aria-describedby="basic-addon3"
+          placeholder="Email"
+          aria-label="email"
+         />
         </InputGroup>
       </Form.Group>
 
-      <InputGroup className="mb-3">
-        <InputGroup.Text>$</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
-        <InputGroup.Text>.00</InputGroup.Text>
-      </InputGroup>
-
       <InputGroup>
-        <InputGroup.Text>With textarea</InputGroup.Text>
+        <InputGroup.Text>Message</InputGroup.Text>
         <Form.Control as="textarea" aria-label="With textarea" />
       </InputGroup>
-
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
     </div>
   );
 }
