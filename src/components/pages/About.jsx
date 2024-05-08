@@ -1,15 +1,17 @@
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>About Me</h1>
+      <img src="./me.jpg" alt="My Image" />
       <p>
-        Nunc pharetra finibus est at efficitur. Praesent sed congue diam.
-        Integer gravida dui mauris, ut interdum nunc egestas sed. Aenean sed
-        mollis diam. Nunc aliquet risus ac finibus porta. Nam quis arcu non
-        lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-        imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus
-        in. Sed rhoncus mollis diam, sit amet facilisis lectus blandit at.
+      My name is Jennie Brockhoff. I have lived my life with a passion for learning, collaboration, and innovation. With a background focused on seemless teamwork, creating positive environments,
+      and education, coding is just the next best step in my journey. Discovering all the possibilities within the software development world has been an eye-opening and
+      exciting opportunity. I look forward to being a strong female representative in the coding world! Finding creative solutions to real problems and contributing to a better 
+      future is something I greatly value, and software developement is the embodiement of that interest. My experience working with people in high-stress environments and
+      problem solving on the go is an asset that I think will lend itself to coding. My love for the people I work for and with will make me the perfect candidate for any 
+      of your needs!
       </p>
     </div>
   );
 }
+
