@@ -1,8 +1,20 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import emailjs from 'emailjs-com';
+import Button from 'react-bootstrap/Button'
+
 
 function Contact() {
+  const service_id = 'service_d74n8re';
+  const template_id = 'template_vj17s95';
+  const user_id = 'f8f3NtsfyGUgLfhSn';
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(service_id, template_id, e.target, user_id)
+    e.target.reset()
+  } 
+
   return (
     <div>
          <h4>
@@ -11,31 +23,24 @@ function Contact() {
         you may have.
       </h4>
       <br></br>
-     
+     <Form onSubmit={handleSubmit}>
      <Form.Group className="mb-3">
       <Form.Label htmlFor="basic-url">Your Information</Form.Label>
       </Form.Group>
       <InputGroup className="mb-3">
         <Form.Control
-          placeholder="First Name"
-          aria-label="firstname"
+          name="from_name"
+          placeholder="Name"
+          aria-label="name"
           aria-describedby="basic-addon1"
         />
       </InputGroup>
-
-      <InputGroup className="mb-3">   
-        <Form.Control
-          placeholder="Last Name"
-          aria-label="lastname"
-          aria-describedby="basic-addon1"
-        />
-      </InputGroup>
-      <br></br>
 
       <Form.Group className="mb-3">
         <Form.Label htmlFor="basic-url">Email</Form.Label>
         <InputGroup>
           <Form.Control id="basic-url" aria-describedby="basic-addon3"
+          name="reply_to"
           placeholder="Email"
           aria-label="email"
          />
@@ -45,10 +50,15 @@ function Contact() {
       <Form.Group className="mb-3">
         <Form.Label placeholder="Message">Message</Form.Label>
         <Form.Control as="textarea"
+          name="message"
           placeholder="Message"
           aria-label="With textarea"
         />
       </Form.Group>
+
+      <Button type="submit">Send</Button>
+
+      </Form>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 export default function About() {
   return (
     <div>
-      <h1>About Me</h1>
-      <img src="./me.jpg" alt="My Image" />
+      <h1 class="about">About Me</h1>
+      <img class="mepic" src="./me.jpg" alt="My Image" />
       <p>
       My name is Jennie Brockhoff. I have lived my life with a passion for learning, collaboration, and innovation. With a background focused on seemless teamwork, creating positive environments,
       and education, coding is just the next best step in my journey. Discovering all the possibilities within the software development world has been an eye-opening and

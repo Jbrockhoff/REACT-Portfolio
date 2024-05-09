@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Project from "../Project";
+import Project from "../components/Project";
 
 const projectData = [
   {
@@ -41,7 +41,7 @@ const projectData = [
 ];
 export default function Projects() {
   return (
-    <div className="grid text-center">
+    <div id="projects" className="grid text-center">
       <div class="g-col-6 g-col-md-4">
       {projectData.map(({ title, description, image, link }) => (
         <div className="g-col-6">
@@ -50,7 +50,8 @@ export default function Projects() {
             <Card.Body>
               <Card.Title>{title}</Card.Title>
               <Card.Text>{description}</Card.Text>
-              <div className="d-flex justify-content-center">
+              <div>
+             
                 <Button variant="light" href={link}>{title}</Button>
               </div>
             </Card.Body>
